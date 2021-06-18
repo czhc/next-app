@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/Link'
 
 export default function Home() {
   return (
@@ -17,8 +18,23 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          <ul>
+            <li>
+              <Link href='/about'>
+                <a>Go to pages/about</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/posts/abc'>
+                <a>Go to pages/abc</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/posts/abc/def'>
+                <a>Go to pages/abc/def</a>
+              </Link>
+            </li>
+          </ul>
         </p>
 
         <div className={styles.grid}>
